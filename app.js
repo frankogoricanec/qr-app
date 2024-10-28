@@ -3,6 +3,8 @@ const pool = require('./db');
 const dotenv = require('dotenv');
 const QRCode = require('qrcode');
 const { auth } = require('express-oauth2-jwt-bearer');
+const cors = require('cors');
+app.use(cors());
 
 // LAB 1 BACKEND
 // Franko Goricanec
