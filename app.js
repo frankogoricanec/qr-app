@@ -47,7 +47,7 @@ app.post('/generate-ticket', authorization, async (req, res) => { // ...endpoint
         [vatin, firstName, lastName]
       );
       const ticketId = newTicket.rows[0].id;  // ...dohvati id ulaznice
-      const url = `http://localhost:4091/show-ticket/${ticketId}`; // ...url endpointa koji prikazuje informacije za QR kod TODO: preimenuj stranicu
+      const url = `https://qr-app-hzs5.onrender.com/show-ticket/${ticketId}`; // ...url endpointa koji prikazuje informacije za QR kod TODO: preimenuj stranicu
   
       const qrCode = await QRCode.toDataURL(url); // ...generiranje QR koda za ulaznicu
   
