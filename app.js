@@ -27,6 +27,12 @@ authorization = auth({
  
   });
 
+  authorizationUser = auth({
+    audience: 'https://auth-lab-api.com',
+    issuerBaseURL: 'https://dev-24mxnjobvcw5u1jo.us.auth0.com'
+ 
+  });
+
 
 // STVARANJE ULAZNICA
 app.post('/generate-ticket', authorization, async (req, res) => { // ...endpoint za stvaranje ulaznice
