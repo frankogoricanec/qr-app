@@ -4,7 +4,6 @@ const dotenv = require('dotenv');
 const QRCode = require('qrcode');
 const { auth } = require('express-oauth2-jwt-bearer');
 const cors = require('cors');
-app.use(cors());
 
 // LAB 1 BACKEND
 // Franko Goricanec
@@ -13,6 +12,7 @@ app.use(cors());
 dotenv.config();
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const PORT = process.env.PORT || 4091;
 
